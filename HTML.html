@@ -1,32 +1,96 @@
-<html>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #fffaf0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-<head>
-<link rel="stylesheet" href="/official/images/style.css">
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<meta name="author" content="Lolcats">
-<meta name="viewport" content="width=device-width, initial-scale=0.4">
-<title>Catbox</title>
-</head>
+header {
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo { font-family: 'Amatic SC', cursive; font-size: 2.2rem; }
+nav { float: right; margin-top: 8px; }
+nav a { color: white; text-decoration: none; margin-left: 2rem; font-weight: 600; }
+nav a:hover { color: #fde68a; }
+.btn { background: #fde68a; color: #4c1d95; padding: 10px 20px; border-radius: 30px; font-weight: bold; }
 
-<img src="/official/images/404.png" style="margin: auto; display: block;">
+.hero {
+    background: linear-gradient(rgba(124,58,237,0.8), rgba(76,29,149,0.9)), url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+    color: white;
+    text-align: center;
+    padding: 180px 20px 120px;
+}
+.hero h2 { font-family: 'Amatic SC', cursive; font-size: 3.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.4rem; margin: 1.5rem 0; }
+.big-btn {
+    display: inline-block;
+    background: #fde68a;
+    color: #4c1d95;
+    padding: 18px 40px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+}
 
-<div class="notetiny">
-<a class="linkbutton" href="https://catbox.moe/">Click me to go home</a>
-</div>
+.section { padding: 100px 0; text-align: center; }
+.light { background: #f8f4ff; }
+h2 { font-family: 'Amatic SC', cursive; font-size: 3rem; color: #4c1d95; margin-bottom: 3rem; }
 
-<script>
-(function (d) {
-window.rum = {key: 'z2ave2fv'};
-var script = d.createElement('script');
-script.src = 'https://cdn.perfops.net/rom3/rom3.min.js';
-script.type = 'text/javascript';
-script.defer = true;
-script.async = true;
-d.getElementsByTagName('head')[0].appendChild(script);
-})(document);
-</script>
+.steps { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.step { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex: 1; min-width: 280px; font-size: 1.3rem; }
 
-</body>
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.gallery-grid img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-</html>
+.price-cards { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 320px;
+}
+.card h3 { font-size: 1.8rem; margin-bottom: 1rem; color: #7c3aed; }
+.price { font-size: 3.5rem; font-weight: bold; color: #4c1d95; margin: 1rem 0; }
+.badge { background: #fde68a; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; }
+.card ul { text-align: left; margin: 2rem 0; }
+.card ul li { margin: 1rem 0; }
+
+.email { font-size: 2rem; color: #7c3aed; font-weight: bold; }
+
+footer { background: #4c1d95; color: white; text-align: center; padding: 2rem; }
+
+@media (max-width: 768px) {
+    nav { float: none; text-align: center; margin-top: 1rem; }
+    nav a { margin: 0 1rem; }
+    .hero h2 { font-size: 2.8rem; }
+}
+.single-example {
+    text-align: center;
+    margin-top: 3rem;
+}
+.single-example img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 12px solid white;
+}
+.caption {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #7c3aed;
+    font-family: 'Patrick Hand', cursive;
+}
+.caption em { color: #555; font-size: 1.1rem; }
